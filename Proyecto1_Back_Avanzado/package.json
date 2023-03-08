@@ -1,0 +1,21 @@
+{
+  "name": "proyecto1_back_avanzado",
+  "version": "1.0.0",
+  "description": "First \"Advanced Back Project\"",
+  "main": "server.js",
+  "scripts": {
+    "start": "node Proyecto1_Back_Avanzado/server.js",
+    "server": "nodemon Proyecto1_Back_Avanzado/server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
