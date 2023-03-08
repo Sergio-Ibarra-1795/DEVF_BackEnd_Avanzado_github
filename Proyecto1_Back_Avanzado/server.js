@@ -1,5 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
+//Para importar el middleware
+const {errorHandler} = require('./middleware/errorMiddleware')
+
 //Para establecer el puerto donde la "app va a escuchar"
 const port = process.env.PORT || 5000
 
@@ -8,6 +11,9 @@ const app = express()
 
 //Para indicarle que vamos a usar json
 app.use(express.json())
+
+//Para usar el middleware
+app.use(errorHandler)
 
 
 //Para indicarle que vamos a pasar informacion con urlencode
