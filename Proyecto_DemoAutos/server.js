@@ -6,8 +6,6 @@ const dotenv = require('dotenv').config()
 const {errorHandler} = require('./middleware/errorMiddleware')
 
 
-
-
 //Para establecer el puerto donde la "app va a escuchar"
 const port = process.env.PORT || 5000
 
@@ -25,6 +23,15 @@ app.use('/api/Proyecto_DemoAutos', require('./routes/autosRoutes'))
 
 //Para usar el middleware
 app.use(errorHandler)
+
+
+//Vamos a mandar a llamar a connectDB que nos ayuda a conectarnos a nuestra base de datos
+const connectDB = require('./config/db')
+const { connect } = require('mongoose')
+
+
+//Y vamos a conectarnos como tal a nuestra base de datos
+connectDB()
 
 
 //Para crear la escucha en nuestro puerto
