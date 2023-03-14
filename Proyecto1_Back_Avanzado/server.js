@@ -31,8 +31,13 @@ app.use(errorHandler)
 app.use(express.urlencoded({extended: false}))
 
 
-// Para mandar a llamar a mi ruta 
+// Para mandar a llamar a mi ruta de tareas
 app.use('/api/Proyecto1_Back_Avanzado', require('./routes/tareasRoutes'))
+
+
+// Para mandar a llamar a mi ruta de usuarios
+app.use('/api/Proyecto1_Back_Avanzado', require('./routes/userRoutes'))
+
 
 //Para crear la escucha en nuestro puerto
 app.listen(port, ()=> console.log(`Server iniciado en el puerto ${port}`))
